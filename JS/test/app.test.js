@@ -1,5 +1,14 @@
 const app = require("../src/app");
 
+test('it should say an empty string is not a palindrome', () => {
+  expect(app.isPalindrome('')).toBe(false);
+})
+
+
+
+
+
+
 test("it should print hello world", () => {
   expect(app.helloWorld()).toBe("hello world");
 });

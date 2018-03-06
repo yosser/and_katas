@@ -4,8 +4,18 @@ function helloWorld() {
 
 module.exports = {
   helloWorld: helloWorld,
-  printNumbers: printNumbers
+  printNumbers: printNumbers,
+  isPalindrome: isPalindrome
+
 };
+
+function isPalindrome(candidate){
+  if (candidate===''){
+    return false;
+}
+
+}
+
 
 
 function printNumbers() {
@@ -25,3 +35,5 @@ function printNumbers() {
 
   return numbers;
 }
+
+
