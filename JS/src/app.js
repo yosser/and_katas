@@ -10,12 +10,10 @@ module.exports = {
 };
 
 function isPalindrome(candidate){
+  candidate = candidate.toLowerCase();
   if (candidate===''){
     return false;
 }
-  if (candidate.length === 1){
-    return true;
-  }
 
   if (candidate.split('').reverse().join('') !== candidate){
     return false;
