@@ -20,7 +20,7 @@ test('it should check for simple palindromes of any length',() => {
   expect(app.isPalindrome('banana')).toBe(false);
   expect(app.isPalindrome('roxor')).toBe(true);
   expect(app.isPalindrome('herring')).toBe(false);
-  exepct(app.isPalindrome('ertytre')).toBe(true);
+  expect(app.isPalindrome('ertytre')).toBe(true);
 })
 
 

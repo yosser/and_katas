@@ -16,9 +16,10 @@ function isPalindrome(candidate){
   if (candidate.length === 1){
     return true;
   }
-  if ((candidate.length === 2) && (candidate[0] !== candidate[1])) {
+
+  if (candidate.split('').reverse().join('') !== candidate){
     return false;
-  } 
+  }
   return true;
 }
 
