@@ -30,6 +30,12 @@ test('it should ignore capital letters', () => {
   expect(app.isPalindrome('tHyhT')).toBe(true);
 })
 
+test('it should figure out what to do with white space', () => {
+  expect(app.isPalindrome(' sun  nus')).toBe(true);
+  expect(app.isPalindrome('ra bb it  tib b ar ')).toBe(true);
+  expect(app.isPalindrome('is this a palindrome')).toBe(false);
+})
+
 
 
 test("it should print hello world", () => {
