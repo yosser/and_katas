@@ -23,6 +23,13 @@ test('it should check for simple palindromes of any length',() => {
   expect(app.isPalindrome('ertytre')).toBe(true);
 })
 
+test('it should ignore capital letters', () => {
+  expect(app.isPalindrome('RoXor')).toBe(true);
+  expect(app.isPalindrome('WOw')).toBe(true);
+  expect(app.isPalindrome('RoXo')).toBe(false);
+  expect(app.isPalindrome('tHyhT')).toBe(true);
+})
+
 
 
 test("it should print hello world", () => {
