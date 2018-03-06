@@ -10,16 +10,11 @@ module.exports = {
 };
 
 function isPalindrome(candidate){
-  candidate = candidate.toLowerCase();
-  candidate = candidate.replace(/ /g, '');
+  candidate = candidate.toLowerCase().replace(/[^a-zA-Z]/g, '');
   if (candidate==='') {
     return false;
   }
-
-  if (candidate.split('').reverse().join('') !== candidate){
-    return false;
-  }
-  return true;
+  return (candidate.split('').reverse().join('') === candidate);
 }
 
 
