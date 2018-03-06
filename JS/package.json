@@ -1,0 +1,27 @@
+{
+  "name": "and-bootcamp-katas",
+  "version": "1.0.0",
+  "author": "@cirpo",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ANDigital/and-bootcamp-katas.git"
+  },
+  "keywords": [
+    "kata",
+    "bootcamp",
+    "js",
+    "jest"
+  ],
+  "bugs": {
+    "url": "https://github.com/ANDigital/and-bootcamp-katas/issues"
+  },
+  "homepage": "https://github.com/ANDigital/and-bootcamp-katas#readme",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^22.4.0"
+  }
+}
