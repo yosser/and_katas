@@ -4,12 +4,12 @@ module.exports = {
 
 };
 
-function isPalindrome(candidate){
-  candidate = candidate.toLowerCase().replace(/[^a-zA-Z]/g, '');
-  if (candidate==='') {
+function isPalindrome(palindrome){
+  sanitised = palindrome.toLowerCase().replace(/[^a-zA-Z]/g, '');
+  if (sanitised === '') {
     return false;
   }
-  return (candidate.split('').reverse().join('') === candidate);
+  return (sanitised.split('').reverse().join('') === sanitised);
 }
 
 
