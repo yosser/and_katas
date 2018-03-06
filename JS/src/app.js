@@ -11,6 +11,7 @@ module.exports = {
 
 function isPalindrome(candidate){
   candidate = candidate.toLowerCase();
+  candidate = candidate.replace(/ /g, '');
   if (candidate==='') {
     return false;
   }
