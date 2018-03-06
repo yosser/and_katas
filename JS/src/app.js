@@ -13,7 +13,8 @@ function isPalindrome(candidate){
   if (candidate===''){
     return false;
 }
-
+  if (candidate.length === 1){
+    return true;}
 }
 
 
