@@ -16,6 +16,12 @@ test('it should consider a string of length 2 that contains the same characters 
   expect(app.isPalindrome('bx')).toBe(false);
 })
 
+test('it should check for simple palindromes of any length',() => {
+  expect(app.isPalindrome('banana')).toBe(false);
+  expect(app.isPalindrome('roxor')).toBe(true);
+  expect(app.isPalindrome('herring')).toBe(false);
+  exepct(app.isPalindrome('ertytre')).toBe(true);
+})
 
 
 
