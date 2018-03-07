@@ -4,7 +4,7 @@ module.exports = {
 
 };
 
-function isPalindrome(palindrome){
+function isPalindrome(palindrome) {
   sanitised = palindrome.toLowerCase().replace(/[^a-z0-9A-Z]/g, '');
   if (sanitised === '') {
     return false;

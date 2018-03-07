@@ -1,5 +1,22 @@
 const app = require("../src/app");
 
+test('it should return false when the number of parameters is 0', ()=>{
+  expect(app.isPalindrome()).toBe(false);
+})
+test('it should return false when the parmeter is undefined', ()=>{
+  expect(app.isPalindrome(undefined)).toBe(false);
+})
+test('it should return false when the parameter is null', ()=>{
+  expect(app.isPalindrome(null)).toBe(false);
+})
+test('it should return false when the parameter is not a string', ()=>{
+  expect(app.isPalindrome([1,2,3])).toBe(false);
+  expect(app.isPalindrome(/[a-z]/)).toBe(false);
+  expect(app.isPalindrome(1)).toBe(false);
+  expect(app.isPalindrome(0.445)).toBe(false);
+  expect(app.isPalindrome({banana:'is a fruit'})).toBe(false);
+})
+
 test('it should say an empty string is not a palindrome', () => {
   expect(app.isPalindrome('')).toBe(false);
 })
