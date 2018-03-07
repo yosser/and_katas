@@ -3,23 +3,15 @@ module.exports = {
 };
 
 function calculator(input) {
-    if (typeof input !== 'string'){
+    if (typeof input !== 'string' || input === ""){
       return 0;
     }
-    if (input === ""){
-      return 0;
-    }
-    
     let numbers = input.split(',');
-    const valid = numbers.every(number => number.match(/^\-?[0-9]+$/));
-    if (!valid) {
-        return 0;
-    }
     if (numbers.length > 2) {
         return 0;
     }
-    let sum =  numbers.map(acc => parseInt(acc)).reduce((acc, current) => acc + current);
-
-    return sum;
-    
+    if(!numbers.every(number => number.match(/^\-?[0-9]+$/))) {
+        return 0;
+    }
+    return numbers.map(acc => parseInt(acc)).reduce((acc, current) => acc + current);
   }
