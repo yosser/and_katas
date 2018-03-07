@@ -34,7 +34,6 @@ test('it should return the value of multiple simple strings as a sum total', () 
   expect(app.calculator('5,10')).toEqual(15);  
   expect(app.calculator('0,10')).toEqual(10);  
   expect(app.calculator('21,150')).toEqual(171);  
-
 })
 
 

@@ -28,7 +28,7 @@ function calculator(input) {
   if (input === ""){
     return 0;
   }
-var sum = parseInt(input);
-  return sum;
+  let val =  input.split(',').map(acc => parseInt(acc)).reduce((acc, current) => acc + current);
+  return val;
 }
 
