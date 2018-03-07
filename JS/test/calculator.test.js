@@ -51,3 +51,11 @@ test('it should return 0 when the input is a integer and the value between two c
     expect(app.calculator('2,3,,a')).toEqual(0);
 })
 
+test('it should return 0 when the input is a integer and the value between two commas is an empty string', ()=>{
+    expect(app.calculator('2,-1')).toEqual(1);
+    expect(app.calculator(',-1')).toEqual(0);
+    expect(app.calculator('2,-3')).toEqual(-1);
+    expect(app.calculator('2,x')).toEqual(0);
+    expect(app.calculator('2 ,3')).toEqual(0);
+    expect(app.calculator('  4 ,3')).toEqual(0);
+})
