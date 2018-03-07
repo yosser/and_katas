@@ -5,6 +5,9 @@ module.exports = {
 };
 
 function isPalindrome(palindrome) {
+  if (typeof palindrome !== 'string'){
+    return false;
+  }
   sanitised = palindrome.toLowerCase().replace(/[^a-z0-9A-Z]/g, '');
   if (sanitised === '') {
     return false;
