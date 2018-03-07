@@ -46,6 +46,8 @@ test('it should return 0 if our string splits to more than 2 numbers', () => {
 
 test('it should return 0 when the input is a integer and the value between two commas is an empty string', ()=>{
     expect(app.calculator('2,,')).toEqual(0);
+    expect(app.calculator(',,')).toEqual(0);
     expect(app.calculator('2,3,,4')).toEqual(0);
     expect(app.calculator('2,3,,a')).toEqual(0);
 })
+

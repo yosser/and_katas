@@ -11,7 +11,10 @@ function calculator(input) {
     }
     
     let numbers = input.split(',');
-
+    const valid = numbers.every(number => number.match(/^\-?[0-9]+$/));
+    if (!valid) {
+        return 0;
+    }
     if (numbers.length > 2) {
         return 0;
     }
