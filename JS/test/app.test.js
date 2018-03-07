@@ -5,17 +5,30 @@ test('it should return 0 for an empty string',() => {
 })
 
 test('it should return false when the number of parameters is 0',() => {
-  expect(app.calculator()).toEqual(false);
+  expect(app.calculator()).toEqual(0);
 })
 
 test('it should return false when the parmeter is undefined', ()=>{
-  expect(app.calculator(undefined)).toEqual(false);
+  expect(app.calculator(undefined)).toEqual(0);
 })
 
-test('it should return false when the parameter is null', ()=>{
-  expect(app.calculator(null)).toEqual(false);
+test('it should return 0 when the parameter is null', ()=>{
+  expect(app.calculator(null)).toEqual(0);
 })
 
+test('it should return 0 when the parameter is not a string', ()=>{
+  expect(app.calculator([1,2,3])).toEqual(0);
+  expect(app.calculator(/[a-z]/)).toEqual(0);
+  expect(app.calculator(1)).toEqual(0);
+  expect(app.calculator(0.445)).toEqual(0);
+  expect(app.calculator({banana:'is a fruit'})).toEqual(0);
+})
+
+test('it should return the value of a simple string as a number', () => {
+  expect(app.calculator('0')).toEqual(0);  
+  expect(app.calculator('2')).toEqual(2); 
+  expect(app.calculator('432')).toEqual(432);   
+})
 
 
 test('it should return false when the number of parameters is 0', ()=>{

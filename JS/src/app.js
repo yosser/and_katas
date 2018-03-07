@@ -23,7 +23,7 @@ function isPalindrome(palindrome) {
 
 function calculator(input) {
   if (typeof input !== 'string'){
-    return false;
+    return 0;
   }
   return 0;
 }
