@@ -1,7 +1,7 @@
 
 module.exports = {
-  isPalindrome: isPalindrome,
-  calculator: calculator
+  isPalindrome: isPalindrome
+  //calculator: calculator
 };
 
 function isPalindrome(palindrome) {
@@ -20,15 +20,3 @@ function isPalindrome(palindrome) {
   return true;
 //  return Array.from(sanitised).every((ch,idx) => sanitised[sanitised.length - 1 - idx] === ch);
 }
-
-function calculator(input) {
-  if (typeof input !== 'string'){
-    return 0;
-  }
-  if (input === ""){
-    return 0;
-  }
-  let val =  input.split(',',2).map(acc => parseInt(acc)).reduce((acc, current) => acc + current);
-  return val;
-}
-

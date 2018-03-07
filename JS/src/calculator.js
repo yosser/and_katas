@@ -9,8 +9,14 @@ function calculator(input) {
     if (input === ""){
       return 0;
     }
-    let val =  input.split(',',2).map(acc => parseInt(acc)).reduce((acc, current) => acc + current);
-    return val;
+    
+    let numbers = input.split(',');
+
+    if (numbers.length > 2) {
+        return 0;
+    }
+    let sum =  numbers.map(acc => parseInt(acc)).reduce((acc, current) => acc + current);
+
+    return sum;
+    
   }
-  
-  
