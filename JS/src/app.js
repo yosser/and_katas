@@ -25,6 +25,10 @@ function calculator(input) {
   if (typeof input !== 'string'){
     return 0;
   }
-  return 0;
+  if (input === ""){
+    return 0;
+  }
+var sum = parseInt(input);
+  return sum;
 }
 
