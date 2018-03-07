@@ -1,5 +1,14 @@
 const app = require("../src/app");
 
+test('it should return 0 for an empty string',() => {
+  expect(app.calculator('')).toEqual(0);
+})
+
+
+
+
+
+
 test('it should return false when the number of parameters is 0', ()=>{
   expect(app.isPalindrome()).toBe(false);
 })
