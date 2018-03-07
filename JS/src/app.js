@@ -12,9 +12,14 @@ function isPalindrome(palindrome) {
   if (sanitised === '') {
     return false;
   }
-  return Array.from(sanitised).every((ch,idx) => sanitised[sanitised.length - 1 - idx] === ch);
+  for(let i = 0; i < Math.floor(sanitised.length / 2); i++) {
+    if( sanitised.charAt(i) !== sanitised.charAt(sanitised.length - 1 - i)) {
+      return false;
+    }
+  }
+  return true;
+//  return Array.from(sanitised).every((ch,idx) => sanitised[sanitised.length - 1 - idx] === ch);
 }
-
 
 
 
