@@ -3,7 +3,7 @@ module.exports = {
 };
 
 function calculator(input) {
-    if (typeof input !== 'string' || input === ""){
+    if (typeof input !== 'string' || input === "") {
       return 0;
     }
     let numbers = input.split(',');
@@ -14,4 +14,4 @@ function calculator(input) {
         return 0;
     }
     return numbers.map(acc => parseInt(acc)).reduce((acc, current) => acc + current);
-  }
+}
