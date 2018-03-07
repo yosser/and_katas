@@ -4,11 +4,11 @@ test('it should return 0 for an empty string',() => {
   expect(app.calculator('')).toEqual(0);
 })
 
-test('it should return false when the number of parameters is 0',() => {
+test('it should return 0 when the number of parameters is 0',() => {
   expect(app.calculator()).toEqual(0);
 })
 
-test('it should return false when the parmeter is undefined', ()=>{
+test('it should return 0 when the parmeter is undefined', ()=>{
   expect(app.calculator(undefined)).toEqual(0);
 })
 
@@ -28,6 +28,13 @@ test('it should return the value of a simple string as a number', () => {
   expect(app.calculator('0')).toEqual(0);  
   expect(app.calculator('2')).toEqual(2); 
   expect(app.calculator('432')).toEqual(432);   
+})
+
+test('it should return the value of multiple simple strings as a sum total', () => {
+  expect(app.calculator('5,10')).toEqual(15);  
+  expect(app.calculator('0,10')).toEqual(10);  
+  expect(app.calculator('21,150')).toEqual(171);  
+
 })
 
 
