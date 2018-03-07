@@ -4,8 +4,17 @@ test('it should return 0 for an empty string',() => {
   expect(app.calculator('')).toEqual(0);
 })
 
+test('it should return false when the number of parameters is 0',() => {
+  expect(app.calculator()).toEqual(false);
+})
 
+test('it should return false when the parmeter is undefined', ()=>{
+  expect(app.calculator(undefined)).toEqual(false);
+})
 
+test('it should return false when the parameter is null', ()=>{
+  expect(app.calculator(null)).toEqual(false);
+})
 
 
 
