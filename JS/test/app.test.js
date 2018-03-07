@@ -36,6 +36,12 @@ test('it should return the value of multiple simple strings as a sum total', () 
   expect(app.calculator('21,150')).toEqual(171);  
 })
 
+test('it should return 0 if our string splits to more than 2 numbers', () => {
+  expect(app.calculator('2,3,4').toEqual(0));
+  expect(app.calculator('1,3,2,3,4').toEqual(0));
+  expect(app.calculator('2,3,4,a').toEqual(0));
+})
+
 
 test('it should return false when the number of parameters is 0', ()=>{
   expect(app.isPalindrome()).toBe(false);
